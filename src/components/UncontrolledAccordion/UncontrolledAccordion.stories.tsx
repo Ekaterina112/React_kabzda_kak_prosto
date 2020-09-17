@@ -8,4 +8,4 @@ export default {
     component: UncontrolledAccordion,
 };
 const callback= action("was clicked")
-export const UncontrolledAccordionCheck =() => <UncontrolledAccordion titleValue={"UserS"} />;
+export const UncontrolledAccordionCheck =() => <UncontrolledAccordion titleValue={"UserS"} defaultValue={callback}/>;

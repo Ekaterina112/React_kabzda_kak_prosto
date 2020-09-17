@@ -4,6 +4,7 @@ import Accordion from '../Accordion/Accordion';
 type AccordionPropsType = {
     collapsed ?: boolean
     titleValue:string
+    defaultValue: ()=>void
 }
 
 function UncontrolledAccordion(props: AccordionPropsType) {
