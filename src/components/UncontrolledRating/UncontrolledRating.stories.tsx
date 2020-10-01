@@ -7,7 +7,7 @@ export default {
     title: 'UncontrolledRating',
     component: UncontrolledRating,
 };
-const callback = action("rating changed")
+export const callback = action("rating changed")
 export const EmptyRating = () => <UncontrolledRating defaultValue={0} onChange={callback} />;
 export const Rating1 = () => <UncontrolledRating defaultValue={1} onChange={callback} />;
 export const Rating2 = () => <UncontrolledRating defaultValue={2} onChange={callback} />;

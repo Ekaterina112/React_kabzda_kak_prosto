@@ -1,0 +1,17 @@
+
+.select.main {
+    border: lightskyblue 2px solid;
+    display: inline;
+    min-height: 20px;
+    min-width: 40px;
+}
+
+.items {
+    border: lightskyblue 2px solid;
+    padding: 5px;
+    position: absolute;
+}
+.item.selected {
+    background-color: #1ea7fd;
+    color: white;
+}

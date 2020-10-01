@@ -5,24 +5,25 @@ import {Rating, RatingValueType} from './components/Rating/Rating';
 import OnOff from './components/OnOff/OnOff';
 import UncontrolledAccordion from './components/UncontrolledAccordion/UncontrolledAccordion';
 import UncontrolledRating from './components/UncontrolledRating/UncontrolledRating';
+import UnControlledOnOff from './components/UncontrolledOnOff/UncontrolledOnOff';
 import UncontrolledOnOff from './components/UncontrolledOnOff/UncontrolledOnOff';
 
 function App() {
-   /* let [ratingValue, setRatingValue] = useState <RatingValueType>(0)
-    let [collapsed, setCollapsed] = useState<boolean>(true)*/
+   let [ratingValue, setRatingValue] = useState <RatingValueType>(0)
+    /*let [collapsed, setCollapsed] = useState<boolean>(true)*/
     let [on, setOn] = useState<boolean>(false)
+    const eeer  = () => setOn(!on)
+
     return (
         <div>
-           {/* <UncontrolledRating />*/}
-
-           {/* <Accordion title = {"Good Morning"} collapsed ={collapsed} onChange = {()=>{setCollapsed(!collapsed)} }/>*/}
-           {/* <Rating value = {ratingValue} onClick={setRatingValue}/>*/}
-
-            <UncontrolledOnOff/>
+            <UnControlledOnOff  defaultOn={on} onChange={eeer}/>
+            <UncontrolledRating defaultValue={ratingValue} onChange={(value)=>setRatingValue(value)}/>
+            {/*<Accordion title = {"Good Morning"} collapsed ={collapsed} onChange = {()=>{setCollapsed(!collapsed)} }/>
+            <Rating value = {ratingValue} onClick={setRatingValue}/>
             <OnOff on={on} onChange={setOn}/>
-           {/* <OnOff call={false}/>
-            <OnOff call={true}/>*/}
-           {/* Article #1
+            <OnOff call={false}/>
+            <OnOff call={true}/>
+            Article #1
             <Rating value = {1}/>
             Article #2
             <Rating value = {2}/>
@@ -33,9 +34,9 @@ function App() {
             Article #5
             <Rating value = {5}/>
             <Accordion title = {"Good Morning"} collapsed ={true} />
-            <Accordion title = {"Good Night"} collapsed ={false} />*/}
-          {/*  <UncontrolledAccordion titleValue={'Menu first'} />*/}
-            {/*<UncontrolledAccordion title={'Menu second'} />*/}
+            <Accordion title = {"Good Night"} collapsed ={false} />
+            <UncontrolledAccordion titleValue={'Menu first'} />
+            <UncontrolledAccordion title={'Menu second'} />*/}
         </div>
     )
 }
