@@ -31,5 +31,5 @@ test ('collapsed should be false', ()=> {
     expect(()=>{
         reducer (state, {type:"FAKE_TYPE"})
     }).toThrowError()
-    
+
 })
