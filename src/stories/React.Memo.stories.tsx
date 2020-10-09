@@ -15,7 +15,7 @@ const UsersSecret = (props: {users:Array<string>}) => {
         {props.users.map((u, i) => <div>{u}</div>)} </div >
 
 }
-const Users=React.memo(UsersSecret) //обертка
+const Users=React.memo(UsersSecret) //обертка //ПРИ ИЗМЕНЕНИИ ПРОПСОВ
 
 export const Example1 = () =>{
     const [count, setCount] =useState(0)
