@@ -58,7 +58,7 @@ export const HelpsToReactMemo = () => {
     const [users, setUsers] = useState(['Tom', 'Nick', 'Sasha'])
     const newArray = useMemo(() => {
         return users.filter(u => u.toLowerCase().indexOf('a') > -1)
-    }, users) //dependencies!!! for doing actual changes 
+    }, users) //dependencies!!! for doing actual changes
     return <>
         <button onClick={() => setCount(count + 1)}>+</button>
         {count}
