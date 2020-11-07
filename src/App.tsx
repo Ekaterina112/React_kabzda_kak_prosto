@@ -7,17 +7,18 @@ import UncontrolledAccordion from './components/UncontrolledAccordion/Uncontroll
 import UncontrolledRating from './components/UncontrolledRating/UncontrolledRating';
 import UnControlledOnOff from './components/UncontrolledOnOff/UncontrolledOnOff';
 import UncontrolledOnOff from './components/UncontrolledOnOff/UncontrolledOnOff';
+import AnalogClock from './components/clock/AnalogClock';
 
 function App() {
-   let [ratingValue, setRatingValue] = useState <RatingValueType>(0)
-    /*let [collapsed, setCollapsed] = useState<boolean>(true)*/
+  /* let [ratingValue, setRatingValue] = useState <RatingValueType>(0)
+    /!*let [collapsed, setCollapsed] = useState<boolean>(true)*!/
     let [on, setOn] = useState<boolean>(false)
-    const eeer  = () => setOn(!on)
+    const eeer  = () => setOn(!on)*/
 
     return (
         <div>
-            <UnControlledOnOff  defaultOn={on} onChange={eeer}/>
-            <UncontrolledRating defaultValue={ratingValue} onChange={(value)=>setRatingValue(value)}/>
+          {/*  <UnControlledOnOff  defaultOn={on} onChange={eeer}/>
+            <UncontrolledRating defaultValue={ratingValue} onChange={(value)=>setRatingValue(value)}/>*/}
             {/*<Accordion title = {"Good Morning"} collapsed ={collapsed} onChange = {()=>{setCollapsed(!collapsed)} }/>
             <Rating value = {ratingValue} onClick={setRatingValue}/>
             <OnOff on={on} onChange={setOn}/>

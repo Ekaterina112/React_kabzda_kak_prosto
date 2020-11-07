@@ -1,13 +1,19 @@
-import React, {useEffect, useState} from 'react';;
-import Clock from './Clock';
+import React from 'react';
+import MyClock from './Clock';
+
 
 export default {
     title: 'CLOCK',
-    component: Clock
+    component: MyClock
 }
-export const BaseExample = () => {
-    return <Clock/>
+export const BaseExampleDigitalClock = () => {
+    return <MyClock  mode={"digital"}/>
 }
+export const BaseExampleAnalogClock = () => {
+    return <MyClock  mode={"analog"}/>
+}
+
+
 /*
 export const Clock: React.FC<PropsType> = (props) => {
     let [clock, setClock] = useState(new Date()) //now clock is a new object
@@ -15,12 +21,12 @@ export const Clock: React.FC<PropsType> = (props) => {
     useEffect(() => {
             console.log('start')
             //need to clear with help id-of-setInterval, setInterval always returns id!
-            //it will wiorking when component dies
+            //it will working when component dies
             const id = setInterval(() => {
                 console.log('tick')
                 // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-                setClock(new Date()), 1000
-            })
+                setClock(new Date())
+            }, 1000)
             return () => clearInterval(id)
         }
         , []
